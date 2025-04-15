@@ -41,7 +41,7 @@
 .res-cards{
     display: flex;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content:flex-start;
     flex-wrap: wrap;
     margin: 10px;
 }
@@ -86,4 +86,10 @@
     height: 90%;
     width: 40%;
     text-align: center;
+}
+
+.btn{
+    cursor: pointer;
+    margin: 10px;
+    padding: 5px;
 }
