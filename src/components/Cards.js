@@ -2,17 +2,17 @@ import {FOOD_URL} from "../Utils/constants";
 
 const Cards = (props)=>{
     const {resData} = props;
-    const {resName,foodName,resRating} = resData;
+    const {name,cuisines,avgRating,cloudinaryImageId} = resData;
     return (
         <div className="card-container">
             <div className="img-container">
-                <img className="food-image" src={""+FOOD_URL} alt="" />
+                <img className="food-image" src={FOOD_URL+cloudinaryImageId} alt={name} />
             </div>
             <div className="card-info">
-                <h3>{resName}</h3>
-                <h5>{foodName}</h5>
-                <h5>{resRating} star rating </h5>
-                <h5>Free Delivery</h5>
+                <h3>{name}</h3>
+                <h5>{cuisines?.join(", ")}</h5>
+                <h5>{avgRating} star rating </h5>
+                <h5>Delivery Time: {resData.sla.deliveryTime} mins</h5>
             </div>
         </div>
     )
