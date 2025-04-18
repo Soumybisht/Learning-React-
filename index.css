@@ -140,3 +140,37 @@
     background-color:aquamarine ;
 }
 
+.menuItems{
+    text-decoration: none;
+    list-style: none;
+}
+
+.menuCards{
+    
+        display: flex;
+        align-items: center;
+        justify-content:flex-start;
+        flex-wrap: wrap;
+        margin: 10px;
+    
+    
+}
+.menuCard-container{
+    height: 320px;
+    width: 220px;
+    background-color: #f0f0f0;
+    padding: 15px;
+    border-radius: 20px;
+    margin: 10px;
+    
+}
+
+.res-info{
+    text-align: center;
+}
+
+a{
+    text-decoration: none;
+    color: inherit;
+    font-style: normal;
+}

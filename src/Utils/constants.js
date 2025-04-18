@@ -2,3 +2,4 @@ export const FOOD_URL = "https://media-assets.swiggy.com/swiggy/image/upload/fl_
 export const LOGO = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQdaMYtVi9_tfNcpsbGGseU6ehYgV9UeU3h7A&s://marketplace.canva.com/EAFpeiTrl4c/2/0/1600w/canva-abstract-chef-cooking-restaurant-free-logo-a1RYzvS1EFo.jpg";
 export const SWIGGY_URL = "https://proxy.cors.sh/https://www.swiggy.com/dapi/restaurants/search/v3?lat=30.2749106&lng=77.9995722&str=restaurants&trackingId=da8a8ad4-9ca9-3869-4b65-613d6cab5d09&submitAction=ENTER&queryUniqueId=d6d39970-9908-ae37-20ef-9bb0bca9ce8b";
 export const MENU_URL = "https://www.swiggy.com/dapi/menu/pl?page-type=REGULAR_MENU&complete-menu=true&lat=30.2749106&lng=77.9995722&restaurantId=716370&catalog_qa=undefined&submitAction=ENTER";
+export const MENU_ITEMS = "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_300,h_300,c_fit/";

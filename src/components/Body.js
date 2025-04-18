@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import {SWIGGY_URL} from "../Utils/constants.js";
 import Shimmer from "./Shimmer.js";
 import { resData } from "../Utils/mockdata.js";
-
+import { Link } from "react-router-dom";
 
 const Body = ()=>{
 
@@ -65,7 +65,7 @@ const Body = ()=>{
                 <Cards name="Dominos" cuisines="Garlic Bread, Pizza, ChocoLavaCake" avgRating="4.7"/>
                 <Cards name="Pizza Hut" cuisines="Burger, Pizza, Coca-Cola" avgRating="4.0"/> */}
                 {resFilteredList.map((data)=>(
-                    <Cards key={data.id} resData={data}/>
+                    <Link to={"/restaurants/"+data.id} key={data.id}><Cards resData={data}/></Link>
                 ))} 
             </div> 
 
