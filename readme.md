@@ -31,3 +31,16 @@ let root = ReactDOM.createRoot(document.getElementById("root"));
 //root.render(jsxHeading);
 root.render(<Func1/>);
 
+/* 
+Normal Native CSS
+SCSS / SASS
+inline CSS
+component Libraries - Material UI, ANT Design, Base UI etc
+Styled Components
+FrameWork - Tailwind CSS
+    -css on the go (csss in the file)
+    -flexibility (customization)
+    -reusability
+    -less bundle size
+*/
+
