@@ -63,7 +63,7 @@ const Body = ()=>{
             <div className="search-bar flex justify-center align-middle my-7">
                 <input className="inputField h-11 w-72 bg-slate-200 mt-3 rounded-md text-center focus:bg-slate-50" type="text" value={searchText} onChange={(e)=>setSearchText(e.target.value)}/>
                 <button className="search-btn h-11 w-20 m-3 bg-green-300 rounded-md hover:text-white hover:bg-green-600" onClick={searching} >Search</button>
-                <button className="btn h-11 w-28 m-3 bg-blue-200 text-sm rounded-md hover:text-white hover:bg-blue-600" onClick={
+                <button className="btn h-11 w-28 m-3 bg-blue-300 text-sm rounded-md hover:text-white hover:bg-blue-600" onClick={
                     ()=>{
                         const filtered = resList.filter((x)=>{
                             return x?.avgRating > 4.5;
@@ -80,7 +80,7 @@ const Body = ()=>{
                 <Cards name="Dominos" cuisines="Garlic Bread, Pizza, ChocoLavaCake" avgRating="4.7"/>
                 <Cards name="Pizza Hut" cuisines="Burger, Pizza, Coca-Cola" avgRating="4.0"/> */}
                 {resFilteredList.map((data)=>(
-                    <Link to={"/restaurants/"+data.id} key={data.id}><Cards resData={data}/></Link>
+                    <Link to={"/restaurants/"+data.id} key={data.id}><Cards {...data}/></Link>
                 ))} 
             </div> 
 
