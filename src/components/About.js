@@ -6,12 +6,6 @@ import useOnlineStatus from "../Utils/useOnlineStatus.js";
 const About = () => {
 
   const onlineStatus = useOnlineStatus();
-  const data = {
-    
-    name:"Soumy Bisht",
-    age:21,
-    address:"Danpur, Rudrapur"
-  }
 
   if(!onlineStatus) {
     return (
@@ -23,7 +17,7 @@ const About = () => {
   return (
     <div>
         <h1>Food Delivering App</h1>
-        <Users aboutData = {data} />
+        <Users />
     </div>
   )
 }

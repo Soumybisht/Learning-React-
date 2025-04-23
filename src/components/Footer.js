@@ -1,4 +1,9 @@
+import UserContext from "../Utils/UserContext.js";
+import { useContext } from "react";
+
 const Footer = ()=>{
+
+  const {user,setUser} = useContext(UserContext); 
     return (
         <footer className="relative bg-slate-600 pt-8 pb-6 text-white">
       <div className="container mx-auto px-4">
@@ -7,6 +12,9 @@ const Footer = ()=>{
             <h4 className="text-3xl font-semibold text-blueGray-700">Let's keep in touch!</h4>
             <h5 className="text-lg mt-0 mb-2 text-blueGray-600">
               Find us on any of these platforms, we respond in 1-2 business days.
+            </h5>
+            <h5 className="text-lg mt-0 mb-2 text-blueGray-600">
+              Contact us on our email here: {user.email}
             </h5>
             <div className="mt-6 lg:mb-0 mb-6 flex">
               <button

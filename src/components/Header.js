@@ -2,6 +2,7 @@ import { useState } from "react";
 import {LOGO} from "../Utils/constants";
 import { Link } from "react-router-dom";
 import useOnlineStatus from "../Utils/useOnlineStatus";
+import { useSelector } from "react-redux";
 
 const Header = ()=>{
 
@@ -10,6 +11,8 @@ const Header = ()=>{
     const togglebtn = ()=>{
         logBtn ==="Login" ? setLogBtn("Logout") : setLogBtn("Login");
     }
+
+    const cartItems = useSelector(store=>store.cart.items);
     return (
         <div className="flex justify-between align-middle bg-slate-300 shadow-lg border-opacity-35 border-2 border-black z-50">
             <div className="flex justify-center align-middle">
@@ -21,8 +24,7 @@ const Header = ()=>{
                     <li className="px-3 hover:bg-slate-600 hover:rounded-md hover:text-white" ><Link to="/">Home</Link></li>
                     <li className="px-3 hover:bg-slate-600 hover:rounded-md hover:text-white" ><Link to="/grocery">Grocery</Link></li>
                     <li className="px-3 hover:bg-slate-600 hover:rounded-md hover:text-white"><Link to="/about">About Us</Link></li>
-                    <li className="px-3 hover:bg-slate-600 hover:rounded-md hover:text-white"><Link to="/contact">Contact Us</Link></li>
-                    <li className="px-3 hover:bg-slate-600 hover:rounded-md hover:text-white">Cart</li>
+                    <li className="px-3 hover:bg-slate-600 hover:rounded-md hover:text-white"><Link to="/cart" >Cart {cartItems.length} items</Link></li>
                     <li className="px-3"><button className="rounded-full" onClick={togglebtn} >{logBtn}</button></li>
                 </ul>
             </div>

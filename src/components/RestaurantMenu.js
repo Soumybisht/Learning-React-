@@ -53,7 +53,7 @@ const RestaurantMenu = () => {
       </ul> */}
       <div className="menuCards flex flex-wrap m-3 justify-items-start">
         { menuItems?.map((item)=>{
-            return <MenuCards key={item?.card?.info?.id} resData={item} />
+            return <MenuCards key={item?.card?.info?.id} {...item} />
           })
         }
       </div>
