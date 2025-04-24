@@ -62,7 +62,7 @@ const Body = ()=>{
         <div className="body-container z-0">
             <div className="search-bar flex justify-center align-middle my-7">
                 <input className="inputField h-11 w-72 bg-slate-200 mt-3 rounded-md text-center focus:bg-slate-50" type="text" value={searchText} onChange={(e)=>setSearchText(e.target.value)}/>
-                <button className="search-btn h-11 w-20 m-3 bg-green-300 rounded-md hover:text-white hover:bg-green-600" onClick={searching} >Search</button>
+                <button data-testid="search-btn" className="search-btn h-11 w-20 m-3 bg-green-300 rounded-md hover:text-white hover:bg-green-600" onClick={searching} >Search</button>
                 <button className="btn h-11 w-28 m-3 bg-blue-300 text-sm rounded-md hover:text-white hover:bg-blue-600" onClick={
                     ()=>{
                         const filtered = resList.filter((x)=>{
